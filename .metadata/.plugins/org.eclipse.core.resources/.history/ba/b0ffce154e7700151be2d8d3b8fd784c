@@ -1,0 +1,9 @@
+name: LinksURL
+main: me.jackears.Links
+version: 1.0
+author: JACKEARS
+commands:
+   links:
+      description: Reloads the config.
+      usage: /<>
+      aliases: [url, website]

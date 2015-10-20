@@ -1,0 +1,7 @@
+#This is the message the player will recive when typing the command /website.
+Messages:
+   Reload: '&6Reloaded &8>> &fReloaded Config!'
+
+# This is the permission message, when a player doesn't have permission.  
+Permission:
+   No: '&6Sorry &8>> &fYou don't have permission to preform this command.'

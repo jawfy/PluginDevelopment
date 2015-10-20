@@ -1,0 +1,7 @@
+name: LinksURL
+main: me.jackears.Links
+version: 1.0
+commands:
+   website:
+      description: Displays your website.
+      usage: /<command>

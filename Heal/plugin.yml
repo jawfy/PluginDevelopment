@@ -1,0 +1,8 @@
+name: Heal
+version: 1.2
+main: me.jackears.Heal
+author: JACKEARS
+commands:
+  Heal:
+    usage: /Heal <player>
+    description: Gives you your selected kit.

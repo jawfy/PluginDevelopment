@@ -1,0 +1,8 @@
+# This is the administrator group, here you can control all admin messages.
+Administrator:
+  Reload: '&6 Reloaded &8>> &fConfig Reloaded!'
+  NoPermission: '&c Permission &8>> &fNo Permission!'
+
+# This is the /links website url message.
+URL:
+  Website: '&6 Website &8>> &fhttp://yourlinkhere.com'

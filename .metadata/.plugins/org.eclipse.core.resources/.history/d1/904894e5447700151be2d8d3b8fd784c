@@ -1,0 +1,7 @@
+name: MainClass
+main: me.yourusernamehere.MainClass
+version: 1.0
+commands:
+   BLANK:
+      description: BLANK
+      usage: /<command>

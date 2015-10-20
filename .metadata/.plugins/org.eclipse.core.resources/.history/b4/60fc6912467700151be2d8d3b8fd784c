@@ -1,0 +1,66 @@
+package me.jackears;
+
+import org.bukkit.Bukkit;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.event.Listener;
+import org.bukkit.permissions.Permission;
+import org.bukkit.plugin.PluginManager;
+import org.bukkit.plugin.java.JavaPlugin;
+
+import me.ultimatum.UtilAPI.UtilAPI;
+import net.md_5.bungee.api.ChatColor;
+
+public class Links extends JavaPlugin implements Listener {
+
+	public Permission website = new Permission("links.url");
+	public Permission reload = new Permission("links.reload");
+	
+	@Override
+	public void onEnable() {
+		new ListenerClass(this);
+		UtilAPI util = new UtilAPI();
+		util.loadPlugin(this);
+		saveDefaultConfig();
+        Bukkit.getServer().getPluginManager().registerEvents(this, this);
+        PluginManager pm = getServer().getPluginManager();
+        pm.addPermission(website);
+		
+	}
+	
+	@Override
+	public void onDisable() {
+		saveConfig();
+	}
+	
+	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+		
+		if (cmd.getName().equalsIgnoreCase("Website") && sender instanceof Player) {
+			
+			Player player = (Player) sender;
+			
+			if (player.hasPermission("links.url")) {
+				player.sendMessage(ChatColor.translateAlternateColorCodes('&', getConfig().getString("Messages.URL")));
+			} else {
+				player.sendMessage(ChatColor.translateAlternateColorCodes('&', getConfig().getString("Permission.No-Permission")));
+			}
+			
+		if (cmd.getName().equalsIgnoreCase("linksr") && sender instanceof Player) {
+			
+			if (player.hasPermission("links.reload")) {
+				player.sendMessage(ChatColor.translateAlternateColorCodes('&', getConfig().getString("Messages.Reload")));
+			} else {
+				player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6Sorry &8>> &Fyou don't have permission to reload the confg."));
+			}
+		}
+			
+			return true;
+			
+		}
+		
+		return false;	
+		
+	}
+	
+}

@@ -1,0 +1,12 @@
+name: KitsPlus
+version: 1.0
+main: me.jackears.KitsPlus
+author: JACKEARS!
+commands:
+  kit:
+    usage: /kit
+    description: Let's you customize all kits!
+  clearinventory:
+    usage: /clearinventory
+    description: Let's you customize all kits!
+    aliases: [ci, clear]

@@ -1,0 +1,13 @@
+name: SimpleMessage
+version: 0.4
+main: me.jackears.SimpleMessage
+author: JACKEARS
+webstie: http://webdev.co.uk
+commands:
+  sm:
+    usage: /<command>
+    description: View The Message.
+  setmessage:
+    usage: /<command>
+    description: Set The Message.
+    

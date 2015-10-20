@@ -1,0 +1,46 @@
+package me.jackears;
+
+import org.bukkit.Bukkit;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.event.Listener;
+import org.bukkit.plugin.java.JavaPlugin;
+
+import me.ultimatum.UtilAPI.UtilAPI;
+import net.md_5.bungee.api.ChatColor;
+
+public class MainClass extends JavaPlugin implements Listener {
+
+	@Override
+	public void onEnable() {
+		new ListenerClass(this);
+		UtilAPI util = new UtilAPI();
+		util.loadPlugin(this);
+		saveDefaultConfig();
+        Bukkit.getServer().getPluginManager().registerEvents(this, this);
+		
+	}
+	
+	@Override
+	public void onDisable() {
+		
+	}
+	
+	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+		
+		if (cmd.getName().equalsIgnoreCase("Website") && sender instanceof Player) {
+			
+			Player player = (Player) sender;
+			
+			player.sendMessage(ChatColor.translateAlternateColorCodes('&', getConfig().getString("Messages.URL")));
+			
+			return true;
+			
+		}
+		
+		return false;	
+		
+	}
+	
+}

@@ -1,0 +1,26 @@
+name: Kits
+version: 1.6.0
+main: me.jackears.Main
+author: JACKEARS
+commands:
+  kit:
+    usage: 
+    description: Gives you your selected kit.
+  kits:
+    usage: /kits
+    description: gives you a list of kits!
+  help:
+    usage: /help
+    description: gives you a list of commands!  
+  gamemode:
+    usage: /gamemode <gamemode>
+    description: changes your gamemode!
+    aliases: [gmc, gms, gma, gma, gm]
+  clearinventory:
+    usage: /clearinventory
+    description: clears your inventory!
+    aliases: [ci]
+
+
+
+    

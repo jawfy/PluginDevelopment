@@ -1,0 +1,11 @@
+name: LinksURL
+main: me.jackears.Links
+version: 1.0
+author: JACKEARS
+commands:
+   website:
+      description: Displays your website.
+      usage: /<command>
+   linksr:
+      description: Reloads the config.
+      usage: /<command>
